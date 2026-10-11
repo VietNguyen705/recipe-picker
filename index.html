@@ -72,7 +72,7 @@ const item=(id,img)=>{const r=byId[id],u="https://www.youtube.com/watch?v="+id;r
 function render(){
   n.innerHTML=[3,5,7].map(k=>`<button class="t ${k==st.n?"on":""}" data-n="${k}">${k} món</button>`).join("");
   c.innerHTML=["Bữa cơm",...CATS].map(k=>`<button class="t ${(k=="Bữa cơm"?!st.cats.length:st.cats.includes(k))?"on":""}" data-c="${k}">${k}</button>`).join("");
-  out.innerHTML=st.list.length?`<ol>${st.list.slice(0,st.n).map((id,i)=>`<li><div class="day"><span class="em">${EM[byId[id][2]]}</span>${DAYS[i]}</div><div class="win"><div class="strip">${item(id,1)}</div></div><button class="re" data-i="${i}">Đổi món khác</button></li>`).join("")}</ol>`:"";
+  out.innerHTML=st.list.length?`<ol>${st.list.slice(0,st.n).map((id,i)=>`<li><div class="day"><span class="em">${EM[byId[id][2]]}</span>Món ${i+1}</div><div class="win"><div class="strip">${item(id,1)}</div></div><button class="re" data-i="${i}">Đổi món khác</button></li>`).join("")}</ol>`:"";
 }
 function spin(only){
   const all=R.map(r=>r[0]),H=108,K=14;
